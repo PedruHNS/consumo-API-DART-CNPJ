@@ -53,10 +53,10 @@ class EmpresaModel {
     );
   }
 
-  String toJson() => json.encode(toMap());
+  String toJson() => jsonEncode(toMap());
 
   factory EmpresaModel.fromJson(String source) =>
-      EmpresaModel.fromMap(json.decode(source) as Map<String, dynamic>);
+      EmpresaModel.fromMap(jsonDecode(source) as Map<String, dynamic>);
 
   @override
   String toString() {

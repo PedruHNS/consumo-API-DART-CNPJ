@@ -1,5 +1,6 @@
-import 'package:consumo_api_cnpj/adapter/http_client.dart';
+
 import 'package:consumo_api_cnpj/repositories/empresa_repository.dart';
+import 'package:consumo_api_cnpj/service/http_packege.dart';
 
 void main(List<String> args) async {
   final client = HttpPackege();
