@@ -2,7 +2,7 @@
 
 import 'dart:convert';
 
-class Empresa {
+class EmpresaModel {
   final String cnpj;
   final String uf;
   final String cep;
@@ -13,7 +13,7 @@ class Empresa {
   final String bairro;
   final String razaoSocial;
 
-  Empresa({
+  EmpresaModel({
     required this.cnpj,
     required this.uf,
     required this.cep,
@@ -39,8 +39,8 @@ class Empresa {
     };
   }
 
-  factory Empresa.fromMap(Map<String, dynamic> map) {
-    return Empresa(
+  factory EmpresaModel.fromMap(Map<String, dynamic> map) {
+    return EmpresaModel(
       cnpj: (map['cnpj'] ?? '') as String,
       uf: (map['uf'] ?? '') as String,
       cep: (map['cep'] ?? '') as String,
@@ -55,8 +55,8 @@ class Empresa {
 
   String toJson() => json.encode(toMap());
 
-  factory Empresa.fromJson(String source) =>
-      Empresa.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory EmpresaModel.fromJson(String source) =>
+      EmpresaModel.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
