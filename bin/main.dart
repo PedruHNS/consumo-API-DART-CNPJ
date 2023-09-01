@@ -6,6 +6,6 @@ void main(List<String> args) async {
   final client = HttpPackege();
   final repository = EmpresaRepository(client: client);
 
-  final empresa = await repository.getCnpj(cnpj: 19131243000197);
+  final empresa = await repository.getCnpj(cnpj: 22938827000183);
   print(empresa);
 }

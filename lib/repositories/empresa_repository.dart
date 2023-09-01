@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
+import 'package:consumo_api_cnpj/adapter/empresa_adapter.dart';
 import 'package:consumo_api_cnpj/service/http_client_interface.dart';
 import 'package:consumo_api_cnpj/models/empresa.dart';
 
@@ -14,6 +15,6 @@ class EmpresaRepository {
 
     final response = await client.get(url: url);
 
-    return EmpresaModel.fromJson(response.body);
+    return EmpresaAdapter.fromJson(response.body);
   }
 }
